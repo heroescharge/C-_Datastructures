@@ -58,6 +58,14 @@ public:
         topNode = nullptr;
     }
 
+    ~Stack() {
+        while (topNode != nullptr) {
+            Node *currNode = topNode;
+            topNode = topNode->next;
+            delete currNode;
+        }
+    }
+
     bool isEmpty() {
         return numElements == 0;
     }

@@ -7,4 +7,16 @@ Implementation of various data structures in C++
 - 2-3 Search Tree
 - Red-Black Search Tree
 - B-Tree
-- Hash Map
+- K-d Tree
+- Hash Map (Separate Chaining)
+- Hash Map (Linear Probing)
+- Sorting
+	- Selection Sort
+	- Insertion Sort
+	- Shellsort
+	- Shuffle Sort
+	- Mergesort
+	- Quicksort
+	- 3-Way Quicksort
+	- 
+- Convex Hull (Graham Scan)

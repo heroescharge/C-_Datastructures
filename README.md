@@ -18,5 +18,4 @@ Implementation of various data structures and algorithms in C++
 	- Mergesort
 	- Quicksort
 	- 3-Way Quicksort
-	- 
 - Convex Hull (Graham Scan)

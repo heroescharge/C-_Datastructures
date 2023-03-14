@@ -1,4 +1,4 @@
-# Cpp_Datastructures
+# Cpp_Datastructures_Algos
 Implementation of various data structures in C++
 - Union Find
 - Stack

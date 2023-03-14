@@ -1,5 +1,5 @@
 # Cpp_Datastructures_Algos
-Implementation of various data structures in C++
+Implementation of various data structures and algorithms in C++
 - Union Find
 - Stack
 - Queue

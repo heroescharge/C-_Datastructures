@@ -4,11 +4,10 @@ Implementation of various data structures and algorithms in C++
 - Stack [COMPLETED]
 - Queue [COMPLETED]
 - Max Heap [COMPLETED]
-- 2-3 Search Tree
 - Red-Black Search Tree
 - B-Tree
 - K-d Tree
-- Hash Map (Separate Chaining)
+- Hash Map (Separate Chaining) [COMPLETED]
 - Hash Map (Linear Probing)
 - Sorting
 	- Shellsort

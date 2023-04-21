@@ -7,7 +7,7 @@
       "request": "launch",
       "args": [],
       "cwd": "/Users/ishir/Documents/GitHub/Cpp_Datastructures",
-      "program": "${fileDirname}/${fileBasenameNoExtension}"
+      "program": "/Users/ishir/Documents/GitHub/Cpp_Datastructures/build/Debug/outDebug"
     }
   ]
 }

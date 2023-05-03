@@ -49,3 +49,30 @@ void mergesort(T arr[], int begin, int end) {
     mergesort(arr, mid + 1, end);
     merge(arr, begin, mid, end);
 }
+
+template <class T>
+void shellshort2(T arr[], int begin, int end, int h) {
+    for (int offset = 0; offset < h; offset++) {
+        for (int i = begin + h + offset; i < end; i+=h) {
+            int j = i;
+            while (j - h >= 0 && arr[j] < arr[j - h]) {
+                std::swap(arr[j], arr[j - h]);
+                j -= h;
+            }
+        }
+    }
+}
+
+// Sort arr with shellshort, including begin and not including end
+template <class T>
+void shellshort(T arr[], int begin, int end) {
+    int h = 1;
+    while (h < (end - begin + 1) / 3) {
+        h = 3 * h + 1;
+    }
+
+    while (h > 0) {
+        shellshort2(arr, begin, end, h);
+        h /= 3;
+    }
+}

@@ -43,7 +43,7 @@ private:
         else if (key > parent->key) {
             parent->rChild = insert2(parent->rChild, key, value);
         }
-        rebalanceTree(parent);
+        return rebalanceTree(parent);
     }
 
     void rotateLeft(Node *node) {
@@ -82,23 +82,26 @@ private:
         node->rChild->isRed = false;
     }
 
-    void rebalanceTree(Node *parent) {
+    Node *rebalanceTree(Node *parent) {
         if (parent == nullptr) {
-            return;
+            return parent;
         }
 
         if (parent->lChild->isRed && parent->rChild->isRed) {
             flipColor(parent);
             rebalanceTree(parent->parent);
+            return parent;
         }
         else if (parent->rChild->isRed) {
             rotateLeft(parent->rChild);
-            rebalanceTree(parent->parent);
+            return rebalanceTree(parent->parent);
         }
         else if (parent->isRed && parent->lChild->isRed) {
             rotateRight(parent);
-            rebalanceTree(parent);
+            return rebalanceTree(parent);
         }
+
+        return parent;
     }
 
 public:
@@ -136,7 +139,7 @@ public:
 
     V find(K key) {
         Node *currNode = root;
-        while (currNode != null) {
+        while (currNode != nullptr) {
             if (key == currNode->key) {
                 return currNode->value;
             }
@@ -165,6 +168,10 @@ public:
 };
 
 int main() {
+    RedBlackTree<int, int> tree;
+    tree.insert(2, 3);
+    tree.insert(4, 5);
+    tree.insert(7, 1);
 
     return 0;
 }

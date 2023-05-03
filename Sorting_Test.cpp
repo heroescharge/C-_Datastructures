@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Sorting.cpp"
+#include "Sorting.cpp" // couldn't be bothered to make a header file
 
 void test_shuffle() {
     int arr[] = {1, 2, 5, 8, 9};
@@ -19,7 +19,17 @@ void test_mergesort() {
     std::cout << std::endl;
 }
 
+void test_shellshort() {
+    int arr[] = {1, 11, 2, 9, 5, 8, 9, 13, 7, -4, -6};
+    shellshort(arr, 0, 11);
+    for (int i = 0; i < 11; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
 int main() {
     // test_shuffle();
     // test_mergesort();
+    test_shellshort();
 }

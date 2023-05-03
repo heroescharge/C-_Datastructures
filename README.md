@@ -1,5 +1,5 @@
 # Cpp_Datastructures_Algos
-Implementation of various data structures and algorithms in C++
+Implementation of various data structures and algorithms in C++ for practice
 - Union Find [COMPLETED]
 - Stack [COMPLETED]
 - Queue [COMPLETED]
@@ -10,7 +10,7 @@ Implementation of various data structures and algorithms in C++
 - Hash Map (Separate Chaining) [COMPLETED]
 - Hash Map (Linear Probing) [COMPLETED]
 - Sorting
-	- Shellsort
+	- Shellsort [COMPLETED]
 	- Shuffle Sort [COMPLETED]
 	- Mergesort [COMPLETED]
 	- Quicksort

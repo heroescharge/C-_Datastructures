@@ -78,5 +78,9 @@ public:
         g.disconnect(a, b);
         return !g.isConnected(a, b);
     }
+
+    std::vector<std::vector<int>> adjacencyList() {
+        return graph;
+    }
 };
 #endif

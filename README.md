@@ -1,5 +1,5 @@
 # Cpp_Datastructures_Algos
-Implementation of various data structures and algorithms in C++ for practice
+Implementation of various data structures and algorithms in C++ purely for practice purposes
 - Union Find [COMPLETED]
 - Stack [COMPLETED]
 - Queue [COMPLETED]

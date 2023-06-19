@@ -16,3 +16,6 @@ Implementation of various data structures and algorithms in C++ for practice
 	- Quicksort
 	- 3-Way Quicksort
 - Convex Hull (Graham Scan) [COMPLETED]
+
+- Diameter & Center Calculations [COMPLETED]
+- Euler Path/Cycle Detection [COMPLETED]

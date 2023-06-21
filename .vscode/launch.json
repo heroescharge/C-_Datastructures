@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ishir/Documents/GitHub/Cpp_Datastructures",
-      "program": "/Users/ishir/Documents/GitHub/Cpp_Datastructures/build/Debug/outDebug"
+      "cwd": "${fileDirname}",
+      "program": "${file}"
     }
   ]
 }

@@ -28,8 +28,18 @@ void test_shellshort() {
     std::cout << std::endl;
 }
 
+void test_quicksort() {
+    int arr[] = {10, 0, 9, 1, 8, 2, 7, 3, 6, 4, 5};
+    quicksort(arr, 0, 10);
+    for (int i = 0; i < 11; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
 int main() {
     // test_shuffle();
     // test_mergesort();
-    test_shellshort();
+    // test_shellshort();
+    test_quicksort();
 }

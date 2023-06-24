@@ -76,3 +76,37 @@ void shellshort(T arr[], int begin, int end) {
         h /= 3;
     }
 }
+
+
+// Quicksort from beginning to end inclusive
+template <class T>
+void quicksort(T arr[], int begin, int end) {
+    if (begin == end) {
+        return;
+    }
+    int lIndex = begin + 1;
+    int rIndex = end;
+    
+    int pivot = arr[begin];
+
+    while (lIndex <= rIndex) {
+        while (arr[lIndex] <= pivot && lIndex <= end) {
+            lIndex++;
+        }
+        while (arr[rIndex] >= pivot && rIndex >= begin + 1) {
+            rIndex--;
+        }
+        if (lIndex < rIndex) {
+            std::swap(arr[lIndex], arr[rIndex]);
+        }
+    }
+    
+    std::swap(arr[begin], arr[rIndex]);
+    
+    if (rIndex > begin) {
+        quicksort(arr, begin, rIndex - 1);
+    }
+    if (lIndex <= end) {
+        quicksort(arr, lIndex, end);
+    }
+}

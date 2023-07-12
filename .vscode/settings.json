@@ -1,5 +1,6 @@
 {
   "files.associations": {
+    "*.embeddedhtml": "html",
     "queue": "cpp",
     "__split_buffer": "cpp",
     "deque": "cpp",
@@ -80,7 +81,8 @@
     "__bits": "cpp",
     "__verbose_abort": "cpp",
     "stack": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "__memory": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",

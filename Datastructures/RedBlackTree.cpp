@@ -1,4 +1,5 @@
 #include <iostream>
+#include <utility>
 
 template <class K, class V>
 class RedBlackTree {
@@ -24,7 +25,53 @@ private:
     };
 
     struct Iterator {
+        Node *node;
+        Iterator(Node *node) {
+            this->node = node;
+        }
 
+        std::pair<K, V> operator*() {
+            return std::pair(node->key, node->value);
+        }
+        std::pair<K, V>* operator->() {
+            return &(std::pair(node->key, node->value));
+        }
+        Iterator& operator++() {
+            if (node->rChild == nullptr) {
+                if (node->parent == nullptr) {
+                    node = nullptr;
+                }
+                else {
+                    while (node->parent != nullptr && node->parent->rChild == node) {
+                        node = node->parent;
+                    }
+                    if (node->parent != nullptr) {
+                        node = node->parent;
+                    }
+                    else {
+                        node = nullptr;
+                    }
+                }
+            }
+            else {
+                node = node->rChild;
+                while (node->lChild != nullptr) {
+                    node = node->lChild;
+                }
+            }
+            return *this;
+        }
+        Iterator operator++(int) {
+            Iterator it = *this;
+            ++(*this);
+            return it;
+        }
+        bool operator==(const Iterator other) const {
+            return this->node == other.node;
+        }
+        bool operator!=(const Iterator other) const {
+            return !(*this == other);
+        }
     };
 
     Node *root;
@@ -159,6 +206,16 @@ private:
         printTree2(parent->rChild);
     }
 
+    void deleteMemory(Node *node) {
+        if (node->lChild != nullptr) {
+            deleteMemory(node->lChild);
+        }
+        if (node->rChild != nullptr) {
+            deleteMemory(node->rChild);
+        }
+        delete node;
+    }
+
 public:
     RedBlackTree() {
         root = nullptr;
@@ -166,7 +223,9 @@ public:
     }
 
     ~RedBlackTree() {
-
+        if (root != nullptr) {
+            deleteMemory(root);
+        }
     }
 
     int size() {
@@ -178,18 +237,6 @@ public:
     }
 
     void insert(K key, V value) {
-        // if (root == nullptr) {
-        //     root = new Node(key, value, nullptr, false);
-        // }
-        // else if (key == root->key) {
-        //     root->value = value;
-        // }
-        // else if (key < root->key) {
-        //     root->lChild = insert2(root->lChild, key, value);
-        // }
-        // else if (key > root->key) {
-        //     root->rChild = insert2(root->rChild, key, value);
-        // }
         if (root == nullptr) {
             root = new Node(key, value, nullptr, false);
             numElements++;
@@ -218,15 +265,18 @@ public:
         return (V) NULL;
     }
 
-    void remove(K key) {
-
-    }
-
     Iterator begin() {
-
+        Node *smallestNode = root;
+        if (smallestNode != nullptr) {
+            while (smallestNode->lChild != nullptr) {
+                smallestNode = smallestNode->lChild;
+            }
+        }
+        return Iterator(smallestNode);
     }
 
     Iterator end() {
+        return Iterator(nullptr);
     }
 
     // Prints the entire tree
@@ -257,6 +307,12 @@ int main() {
     std::cout << tree.find(6) << std::endl;
     std::cout << tree.find(7) << std::endl;
     std::cout << tree.find(8) << std::endl;
+
+    std::cout << "Size: " << tree.size() << std::endl;
+
+    for (std::pair<int, int> p : tree) {
+        std::cout << p.first << " " << p.second << std::endl;
+    }
 
     return 0;
 }

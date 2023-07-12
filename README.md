@@ -3,13 +3,12 @@ Implementation of various data structures and algorithms in C++ purely for pract
 - Union Find [COMPLETED]
 - Stack [COMPLETED]
 - Queue [COMPLETED]
-- Max Heap [COMPLETED]
-- Red-Black Search Tree
-- B-Tree
-- K-d Tree
+- Indexed Priority Queue [COMPLETED]
+- Priority Queue (Max Heap) [COMPLETED]
+- Red-Black Search Tree [COMPLETED]
 - Hash Map (Separate Chaining) [COMPLETED]
 - Hash Map (Linear Probing) [COMPLETED]
-- Sortingi
+- Sorting
 	- Shellsort [COMPLETED]
 	- Shuffle Sort [COMPLETED]
 	- Mergesort [COMPLETED]
@@ -19,3 +18,6 @@ Implementation of various data structures and algorithms in C++ purely for pract
 - Diameter & Center Calculations [COMPLETED]
 - Euler Path/Cycle Detection [COMPLETED]
 - Cycle Detection + Computing Strong Components [COMPLETED]
+- Kruskal's + Prim's Algo [COMPLETED]
+- Dijkstra's, Bellman-Ford
+- Maxflow/Mincut

@@ -82,7 +82,9 @@
     "__verbose_abort": "cpp",
     "stack": "cpp",
     "variant": "cpp",
-    "__memory": "cpp"
+    "__memory": "cpp",
+    "charconv": "cpp",
+    "format": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",

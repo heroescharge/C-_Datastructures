@@ -181,22 +181,22 @@ struct TestOrder {
     }
 };
 
-// Unit testing
-int main() {
-    IndexedPQ pq = IndexedPQ<TestOrder>(10);
-    pq.insert(0, TestOrder(2));
-    pq.insert(1, TestOrder(3));
-    pq.insert(2, TestOrder(-1));
-    pq.insert(3, TestOrder(-6));
-    pq.insert(4, TestOrder(6));
-    std::cout << "Size: " << pq.size() << std::endl;
+// // Unit testing
+// int main() {
+//     IndexedPQ pq = IndexedPQ<TestOrder>(10);
+//     pq.insert(0, TestOrder(2));
+//     pq.insert(1, TestOrder(3));
+//     pq.insert(2, TestOrder(-1));
+//     pq.insert(3, TestOrder(-6));
+//     pq.insert(4, TestOrder(6));
+//     std::cout << "Size: " << pq.size() << std::endl;
 
-    pq.changeKey(0, -12);
-    pq.changeKey(2, -88);
-    std::cout << "Size: " << pq.size() << std::endl;
-    std::cout << pq.pop();
-    std::cout << pq.pop();
-    std::cout << pq.pop();
+//     pq.changeKey(0, -12);
+//     pq.changeKey(2, -88);
+//     std::cout << "Size: " << pq.size() << std::endl;
+//     std::cout << pq.pop();
+//     std::cout << pq.pop();
+//     std::cout << pq.pop();
 
-    return 0;
-}
+//     return 0;
+// }
